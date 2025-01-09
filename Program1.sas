@@ -16,3 +16,12 @@ quit;
 
 proc contents data=work.cars varnum;
 run;
+
+proc freq data=work.cars order=freq;
+run;
+
+proc means data=work.cars;
+run;
+
+proc freq data=work.cars nlevels;
+run;
