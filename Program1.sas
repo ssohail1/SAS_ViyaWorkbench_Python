@@ -10,3 +10,9 @@ run;
 
 proc contents data=cars varnum;
 run;
+
+proc datasets lib=work;
+quit;
+
+proc contents data=work.cars varnum;
+run;
