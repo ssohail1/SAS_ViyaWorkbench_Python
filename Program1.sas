@@ -6,3 +6,7 @@ run;
 
 proc print data=cars(obs=5);
 run;
+
+
+proc contents data=cars varnum;
+run;
