@@ -30,7 +30,7 @@ run;
 proc contents data=data varnum;
 run;
 
-/*joining datasets with proc sql*/
+/* joining datasets with proc sql */
 proc sql ;
 	create table datatableName
 		(drop=unnecessary columns) as
@@ -39,5 +39,10 @@ proc sql ;
   			left join diffdata as diff on maindata.samecol=diff.samecol
 			left differentdata as different on diff.matchcol=different.matchcol
 			left join thirddata as third on maindata.matching=third.matching
-		;
+		; 
 quit;
+
+
+/* view table table column informtion */
+proc contents data=datatableName varnum ;
+run;
