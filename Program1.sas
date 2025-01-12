@@ -46,3 +46,14 @@ quit;
 /* view table table column informtion */
 proc contents data=datatableName varnum ;
 run;
+
+/* Run basic statistics of N N Miss Mean Min Max */
+proc means data=datatableName n nmiss mean min max ;
+run ;
+
+/* save the final dataset as csv */
+proc export data=datatableName outfile='/directory/filename.csv' dbms=csv replace ;
+run ;
+
+
+
