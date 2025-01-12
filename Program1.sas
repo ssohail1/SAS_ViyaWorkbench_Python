@@ -25,3 +25,8 @@ run;
 
 proc freq data=work.cars nlevels;
 run;
+
+/*review data structure and contents*/
+proc contents data=data varnum;
+run;
+
