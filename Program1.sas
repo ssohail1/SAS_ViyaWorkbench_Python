@@ -36,3 +36,8 @@ proc sql ;
 		(drop=unnecessary columns) as
 		select *
 		from data as maindata
+  			left join diffdata as diff on maindata.samecol=diff.samecol
+			left differentdata as different on diff.matchcol=different.matchcol
+			left join thirddata as third on maindata.matching=third.matching
+		;
+quit;
