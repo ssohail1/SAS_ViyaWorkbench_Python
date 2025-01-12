@@ -26,7 +26,13 @@ run;
 proc freq data=work.cars nlevels;
 run;
 
-/*review data structure and contents*/
+/* review data structure and contents */
 proc contents data=data varnum;
 run;
 
+/*joining datasets with proc sql*/
+proc sql ;
+	create table datatableName
+		(drop=unnecessary columns) as
+		select *
+		from data as maindata
